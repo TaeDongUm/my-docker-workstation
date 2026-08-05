@@ -10,6 +10,7 @@
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/git%20init.png)
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/check%20files.png)
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/localworkfolder.png)
+
 ## 2. 실행 환경 정보 확인
 
 - os, 쉡 종류 및 버전, 터미널 종류, docker, git 버전 확인
@@ -85,7 +86,6 @@ Server:
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntudockerexec.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntuexec.png)
 
-
 ## 8. NGINX 기본 이미지 실행
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/nginxdefaultimage.png)
@@ -100,27 +100,27 @@ Server:
 ```html
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docker Workstation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="container">
-        <h1>Docker Workstation</h1>
-        <p>NGINX 컨테이너에서 실행 중인 정적 웹페이지입니다.</p>
+      <h1>Docker Workstation</h1>
+      <p>NGINX 컨테이너에서 실행 중인 정적 웹페이지입니다.</p>
 
-        <section>
-            <h2>사용한 기술</h2>
-            <ul>
-                <li>Docker</li>
-                <li>NGINX</li>
-                <li>HTML/CSS</li>
-            </ul>
-        </section>
+      <section>
+        <h2>사용한 기술</h2>
+        <ul>
+          <li>Docker</li>
+          <li>NGINX</li>
+          <li>HTML/CSS</li>
+        </ul>
+      </section>
     </main>
-</body>
+  </body>
 </html>
 ```
 
@@ -179,21 +179,26 @@ EXPOSE 80
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount3.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount4.png)
 
-
-## 19. Docker 볼륨 생성 
+## 19. Docker 볼륨 생성
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/volumecreate.png)
 
 ## 20. 첫 번째 컨테이너에서 볼륨에 데이터 저장
 
-
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/firstcontainerstore.png)
 
 ## 21. 첫 번째 컨테이너 삭제
-
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/firstcontainerdelete.png)
 
 ## 22. 새 컨테이너에서 기존 데이터 확인
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/newcontainerdatacheck.png)
+
+## 23. git 사용자 정보/ 기본 브랜치 설정 후 확인
+
+- `git config --list --show-origin`
+- 코디세이 맥 환경이 아닌 집 데스크 탑에서 확인하다보니 여러 설정값들이 보여서 origin으로 어디 파일의 환경설정값인지 확인하였음.
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/gitconfiglist1.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/gitconfiglist2.png)
