@@ -202,3 +202,7 @@ EXPOSE 80
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/gitconfiglist1.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/gitconfiglist2.png)
+
+## 24. GitHub 연동 증거
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/git_connect.png)
