@@ -26,6 +26,7 @@ touch README.md
 ```text
 출력 없음
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/making%20files%20at%20specific%20folders.png)
 
 입력
@@ -45,6 +46,7 @@ pwd
 ```text
 /Users/etd937285/codyssey_mission1/my-docker-workstation-git-practice
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/git%20init.png)
 
 입력
@@ -72,6 +74,7 @@ hint:
 hint: Disable this message with "git config set advice.defaultBranchName false"
 Initialized empty Git repository in /Users/etd937285/codyssey_mission1/my-docker-workstation-git-practice/.git/
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/check%20files.png)
 
 입력
@@ -94,6 +97,7 @@ drwxr-xr-x  2 etd937285  etd937285   64  8  5 12:58 screenshots
 drwxr-xr-x  3 etd937285  etd937285   96  8  5 13:10 static
 drwxr-xr-x  3 etd937285  etd937285   96  8  5 13:10 template
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/localworkfolder.png)
 
 입력
@@ -117,6 +121,7 @@ drwxr-xr-x   2 etd937285  etd937285    64  8  5 12:58 screenshots
 drwxr-xr-x   3 etd937285  etd937285    96  8  5 13:10 static
 drwxr-xr-x   3 etd937285  etd937285    96  8  5 13:10 template
 ```
+
 ## 2. 실행 환경 정보 확인
 
 - os, 쉡 종류 및 버전, 터미널 종류, docker, git 버전 확인
@@ -136,6 +141,7 @@ ProductName:            macOS
 ProductVersion:         15.7.4
 BuildVersion:           24G517
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/shell%20check.png)
 
 입력
@@ -152,6 +158,7 @@ zsh 5.9 (x86_64-apple-darwin24.0)
 GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin24)
 Copyright (C) 2007 Free Software Foundation, Inc.
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/terminal%20check.png)
 
 입력
@@ -165,6 +172,7 @@ echo $TERM_PROGRAM
 ```text
 vscode
 ```
+
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/vscodeversion.png)
 
 입력
@@ -180,6 +188,7 @@ code --version
 07ff9d6178ede9a1bd12ad3399074d726ebe6e43
 x64
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerversion.png)
 
 입력
@@ -193,6 +202,7 @@ docker --version
 ```text
 Docker version 28.5.2, build ecc6942
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/git%20version%20check.png)
 
 입력
@@ -227,6 +237,7 @@ Dockerfile  LEARNING_FROM_MISSION1.md  README.md  screenshots  static  templates
 
 디렉터리의 상세 목록이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/cpmvcat.png)
 
 입력
@@ -260,6 +271,7 @@ drwxr-xr-x 12 etd937285  etd937285 384  8  5 14:55 ..
 mv: rename README22.md to movePractice: No such file or directory
 README22.md
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/remove.png)
 
 입력
@@ -275,6 +287,7 @@ ls -a
 ```text
 .  ..
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/rmdir.png)
 
 입력
@@ -367,6 +380,7 @@ docker ps
 ```text
 CONTAINER ID   IMAGE   COMMAND   CREATED   STATUS   PORTS   NAMES
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerps_a.png)
 
 입력
@@ -380,6 +394,7 @@ docker ps -a
 ```text
 CONTAINER ID   IMAGE   COMMAND   CREATED   STATUS   PORTS   NAMES
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerimages1.png)
 
 입력
@@ -416,6 +431,7 @@ Status: Downloaded newer image for hello-world:latest
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/hellotestdockerps_a.png)
 
 입력
@@ -452,6 +468,7 @@ Digest: sha256:3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb
 Status: Downloaded newer image for ubuntu:latest
 root@b1ee529fac8a:/#
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntutestpwd.png)
 
 입력
@@ -468,6 +485,7 @@ ls -la
 
 루트 디렉터리의 파일과 디렉터리 목록이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntuechocat.png)
 
 입력
@@ -482,6 +500,7 @@ cat test.txt
 ```text
 hello ubuntu
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntudockerps_a1.png)
 
 입력
@@ -495,6 +514,7 @@ docker ps -a
 ```text
 ubuntu-test 컨테이너가 종료된 상태로 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntustart1.png)
 
 입력
@@ -508,6 +528,7 @@ docker start ubuntu-test
 ```text
 ubuntu-test
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntudockerexec.png)
 
 입력
@@ -521,6 +542,7 @@ docker exec -it ubuntu-test bash
 ```text
 root@b1ee529fac8a:/#
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntuexec.png)
 
 입력
@@ -534,7 +556,6 @@ cat test.txt
 ```text
 hello ubuntu
 ```
-
 
 ## 8. NGINX 기본 이미지 실행
 
@@ -551,6 +572,7 @@ docker pull nginx:alpine
 ```text
 nginx:alpine 이미지 다운로드가 완료됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerimages2.png)
 
 입력
@@ -564,6 +586,7 @@ docker images
 ```text
 nginx:alpine, ubuntu:latest, hello-world:latest 이미지 목록이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/nginxdefaultcontainer.png)
 
 입력
@@ -577,6 +600,7 @@ docker run -d --name nginx-default -p 8080:80 nginx:alpine
 ```text
 NGINX 컨테이너 ID가 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/nginxdefaultcontainer8080.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/curlhttp.png)
 
@@ -591,6 +615,7 @@ curl http://localhost:8080
 ```text
 NGINX 기본 Welcome 페이지의 HTML이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/nginxdefaultstoprm.png)
 
 입력
@@ -612,27 +637,27 @@ nginx-default
 ```html
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docker Workstation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="container">
-        <h1>Docker Workstation</h1>
-        <p>NGINX 컨테이너에서 실행 중인 정적 웹페이지입니다.</p>
+      <h1>Docker Workstation</h1>
+      <p>NGINX 컨테이너에서 실행 중인 정적 웹페이지입니다.</p>
 
-        <section>
-            <h2>사용한 기술</h2>
-            <ul>
-                <li>Docker</li>
-                <li>NGINX</li>
-                <li>HTML/CSS</li>
-            </ul>
-        </section>
+      <section>
+        <h2>사용한 기술</h2>
+        <ul>
+          <li>Docker</li>
+          <li>NGINX</li>
+          <li>HTML/CSS</li>
+        </ul>
+      </section>
     </main>
-</body>
+  </body>
 </html>
 ```
 
@@ -664,6 +689,7 @@ docker build -t my-web:1.0 .
 ```text
 Dockerfile을 사용해 my-web:1.0 이미지 빌드가 완료됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/customimagebuilddockerimage.png)
 
 입력
@@ -677,6 +703,7 @@ docker images
 ```text
 my-web   1.0 이미지가 목록에 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerinspect1.png)
 
 입력
@@ -690,6 +717,7 @@ docker inspect my-web:1.0
 ```text
 my-web:1.0 이미지의 상세 JSON 정보가 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerinspect2.png)
 
 입력
@@ -735,6 +763,7 @@ curl http://localhost:8080
 ```text
 작성한 Docker Workstation 정적 페이지의 HTML이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/customimagecontainer8080.png)
 
 ## 14. 컨테이너 로그 확인
@@ -785,6 +814,7 @@ docker exec -it my-web-container sh
 ```text
 / #
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopycheck2.png)
 
 입력
@@ -799,6 +829,7 @@ ls -la
 ```text
 index.html과 style.css가 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy3.png)
 
 입력
@@ -812,6 +843,7 @@ cat index.html
 ```text
 컨테이너에 복사된 index.html 내용이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy4.png)
 
 입력
@@ -858,6 +890,7 @@ docker run -d --name bind-web -p 8082:80 -v "$(pwd)/static:/usr/share/nginx/html
 ```text
 바인드 마운트 컨테이너 ID가 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount2.png)
 
 입력
@@ -871,6 +904,7 @@ curl http://localhost:8082
 ```text
 호스트 static 디렉터리의 정적 페이지 HTML이 출력됨
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount3.png)
 
 입력
@@ -884,6 +918,7 @@ echo "bind mount test" >> static/index.html
 ```text
 출력 없음
 ```
+
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount4.png)
 
 입력
@@ -898,8 +933,7 @@ curl http://localhost:8082
 호스트에서 변경한 내용이 반영된 HTML이 출력됨
 ```
 
-
-## 19. Docker 볼륨 생성 
+## 19. Docker 볼륨 생성
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/volumecreate.png)
 
@@ -916,7 +950,6 @@ workstation-data
 ```
 
 ## 20. 첫 번째 컨테이너에서 볼륨에 데이터 저장
-
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/firstcontainerstore.png)
 
@@ -935,7 +968,6 @@ volume persistence test
 ```
 
 ## 21. 첫 번째 컨테이너 삭제
-
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/firstcontainerdelete.png)
 
@@ -965,4 +997,75 @@ docker run --rm -v workstation-data:/data ubuntu cat /data/test.txt
 
 ```text
 volume persistence test
+```
+
+## 23. git 사용자 정보/ 기본 브랜치 설정 후 확인
+
+- `git config --list --show-origin`
+- 코디세이 맥 환경이 아닌 집 데스크 탑에서 확인하다보니 여러 설정값들이 보여서 origin으로 어디 파일의 환경설정값인지 확인하였음.
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/gitconfiglist1.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/gitconfiglist2.png)
+
+입력
+
+```bash
+git config --global user.name "TaeDongUm"
+git config --global user.email "etd93@naver.com"
+git config --global init.defaultBranch main
+git config --list
+```
+
+출력
+
+```text
+user.name=TaeDongUm
+user.email=etd93@naver.com
+...
+(생략)
+init.defaultbranch=main
+```
+
+## 24. GitHub 연동 증거
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/git_connect.png)
+
+입력
+
+```bash
+git remote -v
+```
+
+출력
+
+```text
+origin  https://github.com/TaeDongUm/my-docker-workstation.git (fetch)
+origin  https://github.com/TaeDongUm/my-docker-workstation.git (push)
+```
+
+입력
+
+```bash
+git branch --show-current
+```
+
+출력
+
+```text
+main
+```
+
+입력
+
+```bash
+git status
+```
+
+출력
+
+```text
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
 ```
