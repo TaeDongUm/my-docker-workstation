@@ -9,9 +9,11 @@
 
 ## 2. 실행 환경 정보 확인
 
-- os, 쉡 종류 및 버전, docker, git 버전 확인
+- os, 쉡 종류 및 버전, 터미널 종류, docker, git 버전 확인
 
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/os%20version%20check.png)
 ![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/shell%20check.png)
+![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/terminal%20check.png)
+![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/vscodeversion.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerversion.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/git%20version%20check.png)
