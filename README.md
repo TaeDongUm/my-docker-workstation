@@ -72,7 +72,7 @@ Server:
 
 ## 6. hello-world 컨테이너 실행
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/helloteset.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/hellotest.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/hellotestdockerps_a.png)
 
 ## 7. Ubuntu 컨테이너 실행 및 내부 진입
