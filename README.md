@@ -164,7 +164,7 @@ EXPOSE 80
 ## 16. 컨테이너 내부에 실제로 복사가 되었는지 확인
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopycheck1.png)
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopychekc2.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopycheck2.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy3.png)
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy4.png)
 
