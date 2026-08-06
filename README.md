@@ -1369,3 +1369,6 @@ docker run -d --name vol-test -v mydata:/data ubuntu sleep infinity
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/cpmvcat.png)
 
 - 절대 경로와 상대경로에 대한 실수
+
+## 추가 보너스 과제
+
