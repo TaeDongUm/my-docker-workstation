@@ -1899,3 +1899,5 @@ origin  git@github.com:TaeDongUm/my-docker-workstation.git (push)
 ```
 
 #### 8단계 push로 최종 확인
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/sshfinalcheck.png)
