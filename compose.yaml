@@ -6,3 +6,17 @@ services:
       - "${WEB_PORT}:80"
     volumes:
       - ./templates:/usr/share/nginx/html:ro
+    networks:
+      - bonus-network
+
+  helper:
+    image: nginx:alpine
+    container_name: bonus-helper
+    volumes:
+      - ./helper-templates:/usr/share/nginx/html:ro
+    networks:
+      - bonus-network
+
+networks:
+  bonus-network:
+    driver: bridge
