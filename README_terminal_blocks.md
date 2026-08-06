@@ -98,29 +98,6 @@ drwxr-xr-x  3 etd937285  etd937285   96  8  5 13:10 static
 drwxr-xr-x  3 etd937285  etd937285   96  8  5 13:10 template
 ```
 
-![making files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/localworkfolder.png)
-
-입력
-
-```bash
-ls -la
-```
-
-출력
-
-```text
-total 24
-drwxr-xr-x  10 etd937285  etd937285   320  8  5 14:59 .
-drwxr-xr-x   5 etd937285  etd937285   160  8  5 13:08 ..
--rw-r--r--@  1 etd937285  etd937285  6148  8  5 14:11 .DS_Store
-drwxr-xr-x  10 etd937285  etd937285   320  8  5 13:50 .git
--rw-r--r--   1 etd937285  etd937285     0  8  5 12:58 .gitignore
--rw-r--r--   1 etd937285  etd937285     0  8  5 12:59 Dockerfile
--rwxr-xr-x   1 etd937285  etd937285    22  8  5 14:54 README.md
-drwxr-xr-x   2 etd937285  etd937285    64  8  5 12:58 screenshots
-drwxr-xr-x   3 etd937285  etd937285    96  8  5 13:10 static
-drwxr-xr-x   3 etd937285  etd937285    96  8  5 13:10 template
-```
 
 ## 2. 실행 환경 정보 확인
 
@@ -491,14 +468,15 @@ ls -la
 입력
 
 ```bash
-echo "hello ubuntu" > test.txt
-cat test.txt
+echo "Hello from Ubuntu containter"
+cat /etc/os-release
+exit 
 ```
 
 출력
 
 ```text
-hello ubuntu
+Hello from Ubuntu container
 ```
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/ubuntudockerps_a1.png)
@@ -548,13 +526,13 @@ root@b1ee529fac8a:/#
 입력
 
 ```bash
-cat test.txt
+echo "Entered with docker exec"
 ```
 
 출력
 
 ```text
-hello ubuntu
+Entered with docker exec
 ```
 
 ## 8. NGINX 기본 이미지 실행
@@ -621,15 +599,15 @@ NGINX 기본 Welcome 페이지의 HTML이 출력됨
 입력
 
 ```bash
-docker stop nginx-default
-docker rm nginx-default
+docker stop nginx-original
+docker rm nginx-original
 ```
 
 출력
 
 ```text
-nginx-default
-nginx-default
+nginx-original
+nginx-original
 ```
 
 ## 9. 정적 페이지 작성
@@ -701,10 +679,13 @@ docker images
 출력
 
 ```text
-my-web   1.0 이미지가 목록에 출력됨
+my-static-web   1.0 이미지가 목록에 출력됨
 ```
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerinspect1.png)
+
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerinspect2.png)
 
 입력
 
@@ -718,19 +699,6 @@ docker inspect my-web:1.0
 my-web:1.0 이미지의 상세 JSON 정보가 출력됨
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockerinspect2.png)
-
-입력
-
-```bash
-docker inspect my-web:1.0
-```
-
-출력
-
-```text
-Config, Labels, ExposedPorts 등 이미지 상세 정보가 출력됨
-```
 
 ## 12. 커스텀 이미지 컨테이너 실행
 
@@ -739,7 +707,7 @@ Config, Labels, ExposedPorts 등 이미지 상세 정보가 출력됨
 입력
 
 ```bash
-docker run -d --name my-web-container -p 8080:80 my-web:1.0
+docker run -d --name my-static-web-8080 -p 8080:80 my-web:1.0
 ```
 
 출력
@@ -773,7 +741,7 @@ curl http://localhost:8080
 입력
 
 ```bash
-docker logs my-web-container
+docker logs my-static-web-8080
 ```
 
 출력
@@ -791,6 +759,10 @@ NGINX 시작 로그와 HTTP GET 요청 로그가 출력됨
 ```bash
 docker stats --no-stream
 ```
+- **--no-stream** 은 해당 명령어가 실행될 때 현재 시점의 정지된 스냅샷을 보여줌
+- **docker stats** 는 실시간으로 일정 시간마다 계속 감시
+  - 프로그램이 종료되지 않고 무한 대기 상태에 빠진다.
+
 
 출력
 
@@ -806,36 +778,42 @@ CONTAINER ID   NAME               CPU %   MEM USAGE / LIMIT   MEM %   NET I/O   
 입력
 
 ```bash
-docker exec -it my-web-container sh
+docker run -d --name my-static-web-8081 -p 8081:80 my-static-web:1.0
 ```
 
 출력
 
 ```text
-/ #
+도커 컨테이너 고유 식별 ID 출력
 ```
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopycheck2.png)
 
-입력
-
-```bash
-cd /usr/share/nginx/html
-ls -la
-```
-
-출력
-
-```text
-index.html과 style.css가 출력됨
-```
+- 제대로 동작됨을 브라우저를 통해 확인
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy3.png)
 
 입력
 
+```sh
+docker exec -it my-static-web-8081 sh
+
+ls -la /usr/share/nignx/html
+```
+
+출력 
+
+```text
+세부 파일들 목록을 숨김 파일 포함해서 상세 정보 보여줌
+```
+
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy4.png)
+
+입력
+
 ```bash
-cat index.html
+cat /usr/share/nginx/html/index.html
 ```
 
 출력
@@ -844,27 +822,14 @@ cat index.html
 컨테이너에 복사된 index.html 내용이 출력됨
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/custombuildfilecopy4.png)
-
-입력
-
-```bash
-cat style.css
-```
-
-출력
-
-```text
-컨테이너에 복사된 style.css 내용이 출력됨
-```
-
 ## 17. 이미지와 컨테이너 분리 확인
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/customimageandcontainer.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/imagesandcontainerseparation.png)
 
 입력
 
 ```bash
+docker rm -f my-static-web-8081
 docker images
 docker ps -a
 ```
@@ -872,26 +837,17 @@ docker ps -a
 출력
 
 ```text
-my-web:1.0 이미지와 해당 이미지로 실행한 컨테이너가 각각 별도로 출력됨
+// docker images 결과
+REPOSITORY      TAG       IMAGE ID       CREATED              SIZE
+my-static-web   1.0       d20ff7a623aa   About a minute ago   62.4MB
+
+// docker ps -a 결과
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
 ## 18. 바인드 마운트 검증
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount1.png)
-
-입력
-
-```bash
-docker run -d --name bind-web -p 8082:80 -v "$(pwd)/static:/usr/share/nginx/html:ro" nginx:alpine
-```
-
-출력
-
-```text
-바인드 마운트 컨테이너 ID가 출력됨
-```
-
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount2.png)
 
 입력
 
@@ -905,19 +861,22 @@ curl http://localhost:8082
 호스트 static 디렉터리의 정적 페이지 HTML이 출력됨
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount3.png)
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount2.png)
 
 입력
 
 ```bash
-echo "bind mount test" >> static/index.html
+docker run -d --name bind-web -p 8082:80 -v "$(pwd)/static:/usr/share/nginx/html:ro" nginx:alpine
 ```
 
 출력
 
 ```text
-출력 없음
+바인드 마운트 컨테이너 ID가 출력됨
 ```
+
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount3.png)
 
 ![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bindmount4.png)
 
@@ -956,9 +915,9 @@ workstation-data
 입력
 
 ```bash
-docker run -d --name vol-test -v workstation-data:/data ubuntu sleep infinity
-docker exec vol-test sh -c 'echo "volume persistence test" > /data/test.txt'
-docker exec vol-test cat /data/test.txt
+docker run -d --name vol-test-1 -v workstation-data:/data ubuntu sleep infinity
+docker exec vol-test-1 sh -c 'echo "volume persistence test" > /data/message.txt'
+docker exec vol-test-1 cat /data/message.txt
 ```
 
 출력
@@ -974,13 +933,13 @@ volume persistence test
 입력
 
 ```bash
-docker rm -f vol-test
+docker rm -f vol-test-1
 ```
 
 출력
 
 ```text
-vol-test
+vol-test-1
 ```
 
 ## 22. 새 컨테이너에서 기존 데이터 확인
