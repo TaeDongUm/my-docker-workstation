@@ -1418,8 +1418,8 @@ my-docker-workstation/
 <p>web 컨테이너에서 helper 서비스로 연결되었습니다.</p>
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/helper_index1.png)
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/helper_index2.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/helper_index1.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/helper_index2.png)
 
 - 위 응답이 출력되면 `web` 컨테이너에서 `helper` 컨테이너로 HTTP 요청이 정상적으로 전달된 것으로 판단할 수 있다.
 
@@ -1438,7 +1438,7 @@ WEB_PORT=8080
 
 ### 5. Compose 문법 확인
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockercomposeconfig.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/dockercomposeconfig.png)
 
 입력
 
@@ -1493,9 +1493,9 @@ bonus-web   nginx:alpine   "/docker-entrypoint.…"   web       3 minutes ago   
 bonus-web  | 172.18.0.1 - - [06/Aug/2026:12:08:04 +0000] "GET / HTTP/1.1" 200 647 ...
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockercomposeupd.png)
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockercomposeup1.png)
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/dockercomposeps.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/dockercomposeupd.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/dockercomposeup1.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/dockercomposeps.png)
 
 ### 7. 멀티 컨테이너로 확장
 
@@ -1558,7 +1558,7 @@ bonus-web      nginx:alpine   "/docker-entrypoint.…"   web       12 seconds ag
 
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/multidockercomposeps.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/multidockercomposeps.png)
 
 - 여기서의 차이
 
@@ -1589,7 +1589,7 @@ docker compose exec web curl http://helper
 <p>web 컨테이너에서 helper 서비스로 연결되었습니다.</p>
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/multidockerexecweb.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/multidockerexecweb.png)
 
 > 이를 통해 알 수 있는 것
 
@@ -1671,8 +1671,8 @@ bonus-helper   nginx:alpine   "/docker-entrypoint.…"   helper    10 seconds ag
 bonus-web      nginx:alpine   "/docker-entrypoint.…"   web       10 seconds ago   Up 6 seconds   0.0.0.0:8081->80/tcp
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/envfilechange1.png)
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/envfilechange.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/envfilechange1.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/envfilechange.png)
 
 ### 12. GitHub SSH 키 설정 과정
 
@@ -1808,7 +1808,7 @@ ls -la ~/.ssh
 -rw-r--r-- 1 etd93 197609  97 Aug  6 22:05 id_ed25519.pub
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/lslassh.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/lslassh.png)
 
 ---
 
@@ -1867,7 +1867,7 @@ copy < ~/.ssh/id_ed25519
 → New SSH key
 ```
 
-![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/sshgithub.png)
+![image files](https://github.com/TaeDongUm/my-docker-workstation/blob/main/screenshots/bonus_mission/sshgithub.png)
 
 #### 6단계 GitHub SSH 연결 테스트
 
